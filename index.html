@@ -1,1 +1,111 @@
-Hi
+<!DOCTYPE html>
+<title>My List</title>
+<style>
+table {border-collapse: collapse;}
+td {border: 1px solid; font: 12px monospace;}
+</style>
+<body><script>
+const dt = [ [
+],[,"ARC","Pac-Man"
+],[,"2600","Night Driver"
+],[,"ARC","Moon Cresta"
+],[,"APL2","Akalabeth: World of Doom"
+],[,"ARC","Berzerk"
+],[,"2600","3-D Tic-Tac-Toe"
+],[,"2600","Adventure"
+],[,"2600","Atari 2600"
+],[,"2600","Challenge"
+],[,"INTV","NFL Football"
+],[,"PET","Trail West"
+],[,"INTV","U.S. Ski Team Skiing"
+],[,"MVIS","Baseball"
+],[,"ARC","Cheeky Mouse"
+],[,"DED","Game & Watch: Ball"
+],[,"A800","Lords of Karma"
+],[,"BRD","Skip-Bo (1967)"
+],[,"APL2","Star Avenger"
+],[,"APL2","Terrorist"
+],[,"ARC","Asteroids"
+],[,"INTV","Auto Racing"
+],[,"PBL","Buck Rogers"
+],[,"APL2","Crossword"
+],[,"INTV","Golf"
+],[,"COCO","Jabbertalky"
+],[,"ARC","New York! New York!"
+],[,"ARC","No Man's Land"
+],[,"ARC","Phoenix"
+],[,"LNX","Rogue"
+],[,"ARC","The End"
+],[,"2600","Circus Atari"
+],[,"DED","Game & Watch: Flagman"
+],[,"ARC","Heiankyo Alien"
+],[,"TI","Hunt the Wumpus"
+],[,"A800","Jagdstaffel"
+],[,"PET","Jagdstaffel"
+],[,"A800","Poker Party"
+],[,"ARC","Polaris"
+],[,"ARC","Pulsar"
+],[,"ARC","Rally-X"
+],[,"ARC","Rip Off"
+],[,"2600","Space Invaders"
+],[,"A800","Space Invaders"
+],[,"PET","Spot (1980)"
+],[,"ARC","Star Castle"
+],[,"COCO","Tandy Color Computer"
+],[,"APL2","The Prisoner"
+],[,"VC20","VIC-20"
+],[,"TI","A-Maze-ing"
+],[,"APL2","Air Traffic Controller"
+] ];
+
+const hd = [ [
+],[,"2600","Atari 2600"
+],[,"5200","Atari 5200"
+],[,"A800","Atari 8-bit"
+],[,"AMI" ,"Amiga"
+],[,"APL2","Apple II"
+],[,"ARC" ,"Arcade"
+],[,"BBC" ,"BBC Micro"
+],[,"BRD" ,"Board Game"
+],[,"C64" ,"Commodore 64"
+],[,"COCO","Tandy Color Computer"
+],[,"CPC" ,"Amstrad CPC"
+],[,"CVIS","Colecovision"
+],[,"DED" ,""
+],[,"INTV","Intellivision"
+],[,"LNX" ,"Linux"
+],[,"MAC" ,"Macintosh"
+],[,"MSX" ,"MSX"
+],[,"MVIS","Microvision"
+],[,"NES" ,"NES"
+],[,"PBL" ,"Pinball"
+],[,"PC"  ,"PC"
+],[,"PC88","NEC PC88"
+],[,"PET" ,"Commodore PET"
+],[,"SG1" ,"SG-1000	"
+],[,"TI"  ,"TI-99/4A"
+],[,"VC20","VIC-20"
+],[,"X1"  ,"Sharp X1"
+],[,"ZX"  ,"Sinclair ZX81/Spectrum"
+] ];
+
+// hd.sort(); console.table(hd);
+
+dt.sort();
+
+const gq = "https://www.google.com/search?q=";
+const yq = "https://www.youtube.com/results?search_query=";
+
+let lt = "<table>";
+for(i = 1; i < dt.length; i++) {
+  d2 = dt[i][2];
+  for(j = 1; j < hd.length; j++) {
+    if(dt[i][1] === hd[j][1]) {d1 = hd[j][2];}
+  }
+  lt += `<tr><td>${i}</td>
+    <td><a href="${gq}${d2} ${d1} Wikipedia">${dt[i][1]}</a></td>
+    <td><a href="${yq}${d2} ${d1}"          >${dt[i][2]}</a></td>
+  </tr>`;}
+lt += "</table>";
+document.body.innerHTML = lt;
+</script></body>
