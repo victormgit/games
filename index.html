@@ -125,9 +125,9 @@ for(i = 1; i < dt.length; i++) {d1 = dt[i][1]; d2 = dt[i][2]; d3 = dt[i][3];
   for(j = 1; j < hd.length; j++) {if(d2 === hd[j][1]) {d2 = hd[j][2];}}
   d = `${d3} ${d2}`.replace(/&/g, "%26");
   lt += `<tr>
-    <td><a href="${gi+d}"            >${ i}</a></td>
+    <td>                              ${ i}    </td>
     <td><a href="${gq+d} Wikipedia"  >${d1}</a></td>
-    <td><a href="${yq+d} Walkthrough">${d2}</a></td>
+    <td><a href="${gi+d}"            >${d2}</a></td>
     <td><a href="${yq+d}"            >${d3}</a></td>
   </tr>`;} // Wikipedia Walkthrough
 lt += "</table>";
